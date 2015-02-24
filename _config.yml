@@ -39,8 +39,10 @@ bing_verify:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles
 future:      true
-highlighter: rouge
-markdown:    kramdown
+#highlighter: rouge
+highlighter: pygments
+#markdown:    kramdown
+markdown:    redcarpet
 gems:
   - jekyll-sitemap
 sass:
