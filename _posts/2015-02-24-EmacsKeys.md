@@ -13,8 +13,8 @@ image:
 
 Way back in Visual Studio 2008, many of us rejoiced when Microsoft released a set of key bindings, that mimiced the key bindings used in
 Emacs.  In Visual Studio 2010, the feature was removed from the main product, but the Visual Studio team released the key bindings 
-as an extension "[Emacs Emulation](https://visualstudiogallery.msdn.microsoft.com/09dc58c4-6f47-413a-9176-742be7463f92/)", so it was still
-available for developer, like myself, who still used our old keyboard shortcuts.  I cannot 
+as an extension "[Emacs Emulation](https://visualstudiogallery.msdn.microsoft.com/09dc58c4-6f47-413a-9176-742be7463f92/)", so that it was still
+available for developers, like myself, who still used our old keyboard shortcuts.  I cannot 
 begin to count the number of times that I would pop up the print screen (Ctrl-P), instead of previous line.
 
 However, upon release of Visual Studio 2012, the extension was never updated, so many of us delayed converting for as long as we could,
