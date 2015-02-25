@@ -9,32 +9,30 @@ image:
 ---
 
 {% for post in paginator.posts %}
-<article class="hentry">
-  <header>
-    {% if post.image.feature %}
-      <div class="entry-image-index">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
-      </div><!-- /.entry-image -->
-    {% endif %}
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
-      {% if site.reading_time %}
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        {% assign readtime = post.content | number_of_words | divided_by:site.words_per_minute %}
-        Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
-      </span><!-- /.entry-reading-time -->
-      {% endif %}
-    </div><!-- /.entry-meta -->
+  <header class="entry-header">
+    <h1 class="entry-title" style="background:url(images/{{ post.image.feature }}) no-repeat 0 0;">
     {% if post.link %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
+        <a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}">
+        <i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}
+        </a>
     {% else %}
-      <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+        <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a>
     {% endif %}
+    </h1>
   </header>
+<article class="hentry">
   <div class="entry-content">
-    {{ post.content }}
+    {{ post.excerpt }}
   </div><!-- /.entry-content -->
+
+  <div class="entry-meta">
+    <span class="entry-date date published updated">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        <a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a>
+        </time>
+    </span>
+  </div><!-- /.entry-meta -->
+
 </article><!-- /.hentry -->
 {% endfor %}
 
