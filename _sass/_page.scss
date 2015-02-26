@@ -423,20 +423,6 @@ header .entry-meta {
 			margin-right: auto;
 		}
 	}
-	article {
-		background-color: $white;
-		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.1);
-		@include rounded(3px);
-		margin-bottom: 20px;
-		padding: 25px 15px;
-		@media #{$medium} {
-			padding: 30px;
-		}
-		@media #{$large} {
-			margin-bottom: 30px;
-			padding: 50px 80px;
-		}
-	}
 }
 
 .index-header {
@@ -480,6 +466,26 @@ header .entry-meta {
 	p {
 		color: lighten($base-color,20);
 	}
+}
+
+.index-article {
+	background-color: $white;
+	box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.1);
+	@include rounded(3px);
+
+	margin-bottom: 20px;
+
+	@media #{$medium} {
+		padding: 10px;
+	}
+	@media #{$large} {
+		padding: 20px 80px;
+	}
+
+	@include clearfix;
+	h1, h2, h3, h4, h5, h6, p, li {
+		word-wrap: break-word;
+		}
 }
 
 	
