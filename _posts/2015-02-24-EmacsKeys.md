@@ -2,6 +2,7 @@
 layout: post
 title: Emacs Keys (Emacs Emulator)
 description: "An Emacs key bindings emulator for Visual Studio"
+categories: tools
 tags: [emacs, visual studio]
 modified: 2015-02-24
 image:
@@ -99,9 +100,12 @@ appropriate legal sign-off this release is finally ready.
 
 ## Emacs Keys Project
 
- I can now present to you the original
-[Visual Studio Emacs Emulator extension source](http://github.com/zbrad/EmacsKeys)
-open sourced under the [open source MIT License](http://opensource.org/licenses/MIT).
+I can now present to you the original
+[Visual Studio Emacs Emulator extension](http://github.com/zbrad/EmacsKeys)
+as open source software under the [open source MIT License](http://opensource.org/licenses/MIT).
+
+Since no one at Microsoft wanted to retain ownership, and I had a somewhat vested interest in making sure this
+stuff works, I've listed myself as the project owner.
 
 I have renamed the project to "EmacsKeys" to more accurately
 reflect that it is primarily about mapping key bindings although it does

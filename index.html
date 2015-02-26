@@ -6,17 +6,29 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
 comments: false
 image:
   feature: rhone1.jpg
+  credit: zbrad
+  creditlink: http://zbrad.github.io/
 ---
 
 {% for post in paginator.posts %}
   <header class="entry-header">
-    <h1 class="entry-title" style="background:url(images/{{ post.image.feature }}) no-repeat 0 0;">
+
+    <h1 class="entry-title">
     {% if post.link %}
         <a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}">
         <i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}
         </a>
     {% else %}
-        <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a>
+        <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">
+    {% if post.image.feature %}
+        <img src="{{ site.url }}/images/{{ post.image.feature }}" />
+        <div class="entry-title-index">
+    {% endif %}
+        {{ post.title }}
+    {% if post.image.feature %}
+        </div>
+    {% endif %}
+</a>
     {% endif %}
     </h1>
   </header>
