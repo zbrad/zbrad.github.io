@@ -11,9 +11,9 @@ image:
 ---
 
 {% for post in paginator.posts %}
-  <header class="entry-header">
+  <header class="index-header">
 
-    <h1 class="entry-title">
+    <h1 class="index-title">
     {% if post.link %}
         <a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}">
         <i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}
@@ -22,7 +22,7 @@ image:
         <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">
     {% if post.image.feature %}
         <img src="{{ site.url }}/images/{{ post.image.feature }}" />
-        <div class="entry-title-index">
+        <div class="index-overlay">
     {% endif %}
         {{ post.title }}
     {% if post.image.feature %}

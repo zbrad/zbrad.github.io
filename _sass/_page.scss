@@ -437,20 +437,48 @@ header .entry-meta {
 			padding: 50px 80px;
 		}
 	}
+}
 
-	.entry-header {
-		height: 100px;
-		}
-
-	.entry-title {
-	        margin: 0 auto;
+.index-header {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	height: 100px;
 	}
 
-	.entry-title-index {
-	        position:absolute;
-		top:30px;
-		left: 175px;
-		color: #FFF;
+.index-overlay {
+        position:absolute;
+	top:30px;
+	left: 175px;
+	color: #FFF;
+	}
+
+.index-title {
+	text-align: center;
+	margin: 0 auto;
+	h1 {
+		margin: 10px 20px;
+		font-weight: 700;
+		@include font-rem(32);
+		color: lighten($base-color,20);
+		@media #{$medium} {
+			@include font-rem(48);
+		}
+		@media #{$large} {
+			@include font-rem(60);
+		}
+	}
+	h2 {
+		margin: 0;
+		@include font-rem(18);
+		text-transform: uppercase;
+		color: lighten($base-color,40);
+		@media #{$medium} {
+			@include font-rem(24);
+		}
+	}
+	p {
+		color: lighten($base-color,20);
 	}
 }
 

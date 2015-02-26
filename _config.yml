@@ -10,13 +10,14 @@ words_per_minute: 200
 
 ###############
 # dev config
-#url: //localhost:4000
+#url: http://localhost:4000
 #highlighter: rouge
 
 # prod config
-url: //zbrad.github.io
+url: http://zbrad.github.io
 highlighter: pygments
 
+####################
 # Owner/author information
 owner:
   name:           Brad Merrill
