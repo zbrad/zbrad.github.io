@@ -17,7 +17,7 @@ Announcing the open sourcing of the
 
 I first started using Emacs back when I worked for DEC, on the [TOPS-10](http://en.wikipedia.org/wiki/TOPS-10)
 and [TOPS-20](http://en.wikipedia.org/wiki/TOPS-20)
-operating systems.  It's programming language at that time was
+operating systems.  Its programming language at that time was
 [TECO](http://en.wikipedia.org/wiki/TECO_%28text_editor%29), and the name was
 an acronym for "Editing MACroS".
 
@@ -50,7 +50,7 @@ my Emacs key bindings when I had to use Visual Studio for team projects.
 ## History of Emacs Visual Studio Keybindings
 
 Way back in Visual Studio 2008 many of us rejoiced when
-Microsoft released a set of key bindings that mimiced the key
+Microsoft released a set of key bindings that mimicked the key
 bindings used in [Gnu Emacs](http://www.gnu.org/software/emacs).
 
 In Visual Studio 2010 the Emacs Keybindings feature was
@@ -115,11 +115,11 @@ all.  But I've added some work items to the list to see if we
 can actually improve it over time.
 
 If you are interested in working on this project please just:
-take a fork, dive in, post an issue, etc...
+[take a fork](https://github.com/zbrad/EmacsKeys/fork), dive in, [post an issue](https://github.com/zbrad/EmacsKeys/issues), etc...
 
 ## Useful Links
 
-- [GitHub EmacsKey Project](http://github.com/zbrad/EmacsKeys)
+- [GitHub EmacsKeys Project](http://github.com/zbrad/EmacsKeys)
 - [Visual Studio extension](https://msdn.microsoft.com/en-us/library/dd885119.aspx)
 - [Visual Studio 2008 Emacs Shortcut Keys](http://msdn.microsoft.com/en-us/library/ms165528%28VS.90%29.aspx)
 - [Visual Studio 2010 Blog Entry Accouncing Emacs Emulation](http://blogs.msdn.com/b/visualstudio/archive/2010/09/01/emacs-emulation-extension-now-available.aspx)
