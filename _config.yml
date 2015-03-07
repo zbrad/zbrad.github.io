@@ -14,7 +14,7 @@ url:
 #highlighter: rouge
 
 # prod config
-url: http://<username>.github.io
+url: http://zbrad.github.io/blog-theme/
 highlighter: pygments
 
 ####################
