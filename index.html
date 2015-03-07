@@ -1,37 +1,35 @@
 ---
 layout: post-index
 title: Latest Posts
-description: "Describe this nonsense."
+description: "ZBrad's Blog"
 tags: [Jekyll, theme, themes, responsive, blog, modern]
 comments: false
 image:
-  feature: abstract-1.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  feature: rhone1.jpg
+  credit: zbrad
+  creditlink: http://zbrad.github.io/
 ---
 
 {% for post in paginator.posts %}
   <header class="index-header">
 
     <h1 class="index-title">
-
-    {% if post.image.feature %}
-        <img src="{{ site.url }}/images/{{ post.image.feature }}" />
-    {% else %}
-        <img src="{{ site.url }}/images/abstract-1.jpg" />
-    {% endif %}
-
-        <div class="index-overlay">
     {% if post.link %}
         <a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}">
         <i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}
         </a>
     {% else %}
         <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">
-        {{ post.title }}
-        </a>
+    {% if post.image.feature %}
+        <img src="{{ site.url }}/images/{{ post.image.feature }}" />
+        <div class="index-overlay">
     {% endif %}
+        {{ post.title }}
+    {% if post.image.feature %}
         </div>
+    {% endif %}
+</a>
+    {% endif %}
     </h1>
   </header>
 

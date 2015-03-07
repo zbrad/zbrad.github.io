@@ -1,11 +1,10 @@
-title:            Site Title
-description:      Describe your website here.
-disqus_shortname: hpstrtheme
+title:            ZBrad's Blog
+description:      Thoughts on programming, chess, and wine
+disqus_shortname: zbrad-disqus
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
 
 
 ###############
@@ -14,27 +13,27 @@ url:
 #highlighter: rouge
 
 # prod config
-url: http://zbrad.github.io/blog-theme/
+url: http://zbrad.github.io
 highlighter: pygments
 
 ####################
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  name:           Brad Merrill
+  avatar:         headshot.png
+  bio:            "I've been a developer, manager, director, author, speaker, etc. Currently working at Microsoft."
+  email:          brad_merrill@hotmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
+  twitter:        http://twitter.com/zbrad
   facebook:       
-  github:         
+  github:         http://github.com/zbrad
   stackexchange:  
-  linkedin:       
+  linkedin:       http://linkedin.com/in/zbrad
   instagram:      
   flickr:         
-  tumblr:         
+  tumblr:
   # google plus id, include the '+', eg +mmistakes
-  google_plus:    +yourid
+  google_plus:    +zbrad1
 
 # Background image to be tiled on all pages
 background: 
@@ -46,9 +45,10 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    America/Los_Angeles
 future:      true
 
+#markdown:    kramdown
 markdown:    redcarpet
 
 gems:
@@ -79,4 +79,4 @@ kramdown:
     coderay_css: class
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules","*~","#*","post_examples"]
