@@ -9,12 +9,12 @@ words_per_minute: 200
 
 ###############
 # dev config
-url: http://localhost:4000/
-highlighter: rouge
+#url: http://localhost:4000/
+#highlighter: rouge
 
 # prod config
-#url: http://zbrad.github.io
-#highlighter: pygments
+url: http://zbrad.github.io
+highlighter: pygments
 
 ####################
 # Owner/author information
