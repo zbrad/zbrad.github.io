@@ -10,12 +10,12 @@ url:
 
 ###############
 # dev config
-url: http://localhost:4000
-highlighter: rouge
+#url: http://localhost:4000
+#highlighter: rouge
 
 # prod config
-#url: http://<username>.github.io
-#highlighter: pygments
+url: http://<username>.github.io
+highlighter: pygments
 
 ####################
 # Owner/author information
