@@ -77,10 +77,11 @@ In this case PowerShell will call *Get-Text* cmdlet for each file in the folder.
 ## A Brief Look At The Script ##
 
 The file *Oxford.ps1* defines 2 cmdlets:
-- Get-Text
-- Invoke-Oxford
 
-The *Get-Text* cmdlet requires 2 mandatory parameters **Image** and **OxfordKey**.   The function is declared as:
+- **Get-Text**
+- **Invoke-Oxford**
+
+The **Get-Text** cmdlet requires 2 mandatory parameters **Image** and **OxfordKey**.   The function is declared as:
 
 ```powershell
 function Get-Text
