@@ -47,15 +47,10 @@ future:      true
 
 #markdown:    kramdown
 markdown:    redcarpet
-<<<<<<< HEAD
-gems:
-  - jekyll-sitemap
-=======
 
 gems:
   - jekyll-sitemap
 
->>>>>>> origin/master
 sass:
   sass_dir: _sass
   style: compressed
