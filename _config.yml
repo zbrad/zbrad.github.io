@@ -3,18 +3,18 @@ description:      Thoughts on programming, chess, and wine
 disqus_shortname: zbrad-disqus
 reading_time:     true
 words_per_minute: 200
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-
 
 ###############
 # dev config
-#url: http://localhost:4000/
+url: http://localhost:4000
+highlighter: rouge
+
+# I like rouge but not in use on github (yet)
 #highlighter: rouge
 
 # prod config
-url: http://zbrad.github.io
-highlighter: pygments
+url: https://zbrad.github.io
+#highlighter: pygment 
 
 ####################
 # Owner/author information

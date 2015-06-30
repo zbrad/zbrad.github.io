@@ -1,14 +1,34 @@
 require "rubygems"
-require "bundler/setup"
+require "fileutils"
 require "stringex"
+require "logger"
 
 ## -- Config -- ##
 
 public_dir      = "public"    # compiled site directory
-posts_dir       = "_posts"    # directory for blog files
+posts_dir       = "_posts"    # directory for published blog files
+drafts_dir      - "_drafts"   # directory for draft blog files
 new_post_ext    = "md"  # default new post file extension when using the new_post task
 new_page_ext    = "md"  # default new page file extension when using the new_page task
 
+#############################
+# Start development         #
+#############################
+desc "compile and run the blog site"
+task :default do
+  pids = [
+    spawn("bundle exec jekyll server --watch --drafts"),
+ ]
+
+  trap "INT" do
+    Process.kill "INT", *pids
+    exit 1
+  end
+
+  loop do
+    sleep 1
+  end
+end
 
 #############################
 # Create a new Post or Page #
@@ -43,6 +63,57 @@ task :new_post, :title do |t, args|
     post.puts "---"
   end
 end
+
+# usage rake new_draft
+desc "Create a new draft in #{drafts_dir}"
+task :new_draft, :title do |t, args|
+  if args.title
+    title = args.title
+  else
+    title = get_stdin("Enter a title for your draft: ")
+  end
+  filename = "#{drafts_dir}/#{title.to_url}.#{new_post_ext}"
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  dirname = File.dirname(drafts_dir)
+  unless File.directory?(dirname)
+     FileUtils.mkdir_p(dirname)
+  end
+  category = get_stdin("Enter category to your draft: ")
+  tags = get_stdin("Enter tags to classify your draft (comma separated): ")
+  puts "Creating new draft: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    post.puts "modified: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
+    post.puts "tags: [draft, #{tags} ]"
+    post.puts "category: #{category}"
+    post.puts "links:"
+    post.puts "keywords:"
+    post.puts "---"
+  end
+end
+
+desc 'List all draft posts'
+task :drafts do
+  puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`
+end
+
+# usage rake publish_draft [name]
+# name can be any string that fully or partially matches a draft
+desc "Publish the draft to ${posts_dir}"
+task :publish_draft, :draft, :commit, :title do |t, args|
+  abort("No draft specified") if args.draft.nil?
+  draft_name = GetDraftFilename(drafts_dir, new_post_ext, args.draft)
+  draft_file = "${drafts_dir}/${draft_name}"
+  abort("Specified draft not found") unless File.exist?(draft_file)
+end
+  
+
+
+
 
 # usage rake new_page
 desc "Create a new page"
