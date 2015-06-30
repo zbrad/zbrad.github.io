@@ -18,44 +18,52 @@ quick hack, but rolled up into a Powershell cmdlet that could be reused by other
 ## Setting up the Oxford APIs for use ##
 
 To quickly get up to speed, I followed the descriptions [here](https://www.projectoxford.ai/doc/general/subscription-key-mgmt) which outline the steps as:
+
 - Select the API you wish to use
   - I navigated to [Computer Vision APIs](https://www.projectoxford.ai/vision) and selected the "Sign Up" button.
-
-
 - This will bring up the Azure portal, select the marketplace
   ![](/images/psoxford/select-from-marketplace.png)
   you will have to option of naming your service, I chose *VisionApi*
   ![](/images/psoxford/portal.png)
   The "purchase" is free, and shows up as an Azure Marketplace offering. (Note that you may need to scroll down the listing of services in the Azure portal.
-
 - When you are presented with the "dashboard" for the marketplace, select the "Manage" option
   ![](/images/psoxford/visionapi_dashboard.png)
-
 - You will now see your subscriptions with key information hidden.  Select *Show* and copy your new **OxfordKey**.
   ![](/images/psoxford/show-key.png)
 
-Now that we have the service side setup, we will use the **Oxford.ps1** script from [psoxford](https://github.com/zbrad/psoxford).  Easiest way to get this is to clone the repo, which will also get you our test images.
+  Now that we have the service side setup, we will use the **Oxford.ps1** script from [psoxford](https://github.com/zbrad/psoxford).  Easiest way to get this is to clone the repo, which will also get you our test images.
 
-Steps:
-- Launch a powershell session (I prefer to use the *Windows PowerShell ISE*.
-- navigate to your clone
-- import the script and set your key
+## PowerShell ##
+
+### Setup ###
+
+1. Launch a powershell session (I prefer to use the *Windows PowerShell ISE*.
+1. Navigate to your clone
+1. Import the script and set your key
 
 ```powershell
 . .\Oxford.ps1
 $key = 'put your oxford key here'
 ```
-  now we can call the Oxford OCR and get results:
+
+### Single File ###
+
+We can now call the Oxford OCR and get results:
 
 ```powershell
 $image = '.\images\ifwedid.jpg'
 Get-Text -Image $image -OxfordKey $key
 ```
 
+which altogether when run:
+
 ![](/images/psoxford/get-text-single.png)
 
 
-- That's fine for a single file, but what if we want all the files in a folder?  PowerShell to the rescue:
+
+### Multiple Files ###
+
+That's fine for a single file, but what if we want all the files in a folder?  PowerShell to the rescue:
 
 ```powershell
 $files = Get-ChildItem .\images | % { $_.FullName }
@@ -72,7 +80,7 @@ The file *Oxford.ps1* defines 2 cmdlets:
 - Get-Text
 - Invoke-Oxford
 
-The *Get-Text* cmdlet requires 2 mandatory parameters **Image** and **OxfordKey**.   The function is declard as:
+The *Get-Text* cmdlet requires 2 mandatory parameters **Image** and **OxfordKey**.   The function is declared as:
 
 ```powershell
 function Get-Text
