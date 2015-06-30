@@ -6,3 +6,7 @@ gem 'octopress', '~> 3.0.0.rc.12'
 gem 'jekyll-sitemap'
 gem 'rouge'
 gem 'redcarpet'
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master

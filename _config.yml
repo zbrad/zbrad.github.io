@@ -6,10 +6,7 @@ words_per_minute: 200
 
 ###############
 # dev config
-url: http://localhost:4000
-highlighter: rouge
-
-# I like rouge but not in use on github (yet)
+#url: http://localhost:4000
 #highlighter: rouge
 
 # prod config
@@ -50,10 +47,15 @@ future:      true
 
 #markdown:    kramdown
 markdown:    redcarpet
+<<<<<<< HEAD
+gems:
+  - jekyll-sitemap
+=======
 
 gems:
   - jekyll-sitemap
 
+>>>>>>> origin/master
 sass:
   sass_dir: _sass
   style: compressed

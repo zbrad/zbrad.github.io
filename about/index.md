@@ -12,3 +12,7 @@ modified: 2014-02-23
 ## About ZBrad
 
 Currently working at Microsoft...
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
