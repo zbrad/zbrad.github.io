@@ -7,11 +7,5 @@ node_modules
 Gemfile.lock
 .sass-cache
 *~
-<<<<<<< HEAD
-*#
-
-*.bak
-=======
 *.*~
 *.bak
->>>>>>> origin/master

@@ -150,11 +150,7 @@ body {
 		background-color: rgba($base-color,0.3);
 	}
 	img {
-<<<<<<< HEAD
  		position: absolute; 
-=======
-		position: absolute; 
->>>>>>> origin/master
 		top: 0; 
 		left: 0; 
 		right: 0; 
@@ -419,25 +415,15 @@ header .entry-meta {
 		@media #{$medium} {
 			margin-left: 20px;
 			margin-right: 20px;
-<<<<<<< HEAD
 		}
-=======
-		        }
->>>>>>> origin/master
 		@media #{$large} {
 			max-width: 800px;
 			margin-top: 50px;
 			margin-left: auto;
 			margin-right: auto;
-<<<<<<< HEAD
 		}
 	}
 }
-=======
-		        }
-	        }
-       }
->>>>>>> origin/master
 
 .index-header {
 	width: 100%;
@@ -449,48 +435,16 @@ header .entry-meta {
 .index-overlay {
         position:absolute;
 	top:30px;
-<<<<<<< HEAD
-	left: 175px;
-	color: #FFF;
-	}
-
-=======
 	left: 60px;
 	color: #FFF;
 	}
 
-
->>>>>>> origin/master
 .index-title {
 	text-align: center;
 	margin: 0 auto;
 	h1 {
 		margin: 10px 20px;
 		font-weight: 700;
-<<<<<<< HEAD
-		@include font-rem(32);
-		color: lighten($base-color,20);
-		@media #{$medium} {
-			@include font-rem(48);
-		}
-		@media #{$large} {
-			@include font-rem(60);
-		}
-	}
-	h2 {
-		margin: 0;
-		@include font-rem(18);
-		text-transform: uppercase;
-		color: lighten($base-color,40);
-		@media #{$medium} {
-			@include font-rem(24);
-		}
-	}
-	p {
-		color: lighten($base-color,20);
-	}
-}
-=======
                 @include font-rem(32);
 		@media #{$medium} {
 			@include font-rem(48);
@@ -511,7 +465,6 @@ header .entry-meta {
                 color: #FFF;
                 }
         }
->>>>>>> origin/master
 
 .index-article {
 	background-color: $white;
@@ -522,28 +475,16 @@ header .entry-meta {
 
 	@media #{$medium} {
 		padding: 10px;
-<<<<<<< HEAD
-	}
-	@media #{$large} {
-		padding: 20px 80px;
-	}
-=======
                 }
 	@media #{$large} {
 		padding: 20px 80px;
                 }
->>>>>>> origin/master
 
 	@include clearfix;
 	h1, h2, h3, h4, h5, h6, p, li {
 		word-wrap: break-word;
 		}
-<<<<<<< HEAD
-}
-
-=======
         }
->>>>>>> origin/master
 	
 // Footer
 // --------------------------------------------------

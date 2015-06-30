@@ -11,8 +11,5 @@ modified: 2014-02-23
 
 ## About ZBrad
 
-Currently working at Microsoft...
-<<<<<<< HEAD
+If you've used any of [my other themes](http://mademistakes.com/work/jekyll-themes/) most of this should be familiar territory...
 
-=======
->>>>>>> origin/master
