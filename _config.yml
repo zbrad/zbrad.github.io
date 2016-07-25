@@ -6,29 +6,26 @@ words_per_minute: 200
 
 ###############
 # dev config
-#url: http://zbrad3:4000
-#highlighter: rouge
+url: http://localhost:4000
 
 # prod config
-url: http://zbrad.github.io
-highlighter: pygments
+#url: http://zbrad.github.io
 
-####################
 # Owner/author information
 owner:
   name:           Brad Merrill
-  avatar:         headshot.png
+  avatar:         z/headshot.png
   bio:            "I've been a developer, manager, director, author, speaker, etc. Currently working at Microsoft."
   email:          brad_merrill@hotmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        http://twitter.com/zbrad
+  twitter:        https://twitter.com/zbrad
   facebook:       
-  github:         http://github.com/zbrad
+  github:         https://github.com/zbrad
   stackexchange:  
-  linkedin:       http://linkedin.com/in/zbrad
+  linkedin:       https://linkedin.com/in/zbrad
   instagram:      
   flickr:         
-  tumblr:
+  tumblr:         
   # google plus id, include the '+', eg +mmistakes
   google_plus:    +zbrad1
 
@@ -44,12 +41,14 @@ bing_verify:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles
 future:      true
-
-#markdown:    kramdown
-markdown:    redcarpet
+highlighter: rouge
+markdown:    kramdown
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
 
 sass:
   sass_dir: _sass
@@ -62,18 +61,39 @@ permalink:   /:categories/:title/
 paginate: 5
 
 kramdown:
+  input: GFM
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: true
+  enable_coderay: false
 
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+include: 
+  - .htaccess
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules","*~","#*","post_examples"]
+exclude:
+  - "*~"
+  - "#*"
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - LICENSE
+  - README.md
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp

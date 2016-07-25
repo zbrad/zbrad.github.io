@@ -6,13 +6,13 @@ categories: tools
 tags: [emacs, visual studio]
 modified: 2015-02-24
 image:
-  feature: abstract-1.jpg
+  feature: z/blossoms.jpg
   credit: zbrad
-  creditlink: http://zbrad.github.io/
+  creditlink: https://zbrad.github.io/
 ---
 
 Announcing the open sourcing of the
-[Visual Studio Emacs Emulator extension](http://github.com/zbrad/EmacsKeys) for Visual Studio 2013. 
+[Visual Studio Emacs Emulator extension](https://github.com/zbrad/EmacsKeys) for Visual Studio 2013. 
 
 ## My Personal Journey with Emacs
 
@@ -39,7 +39,7 @@ for it.  So I created an Emacs C# mode (cc-mode at that time was not yet ready)
 so that I could edit my source code and have some basic syntax highlighting.
 (For an example of an older C#
 project which builds using a Makefile see my
-[CsLex Project](http://github.com/zbrad/CsLex))
+[CsLex Project](https://github.com/zbrad/CsLex))
 
 I left Microsoft in 2006, but continued to work in a mixed Visual Studio /
 Emacs mode.  During that time my Emacs skills were still very helpful and
@@ -101,7 +101,7 @@ appropriate legal sign-off this release is finally ready.
 ## Emacs Keys Project
 
 I can now present to you the original
-[Visual Studio Emacs Emulator extension](http://github.com/zbrad/EmacsKeys)
+[Visual Studio Emacs Emulator extension](https://github.com/zbrad/EmacsKeys)
 as open source software under the [open source MIT License](http://opensource.org/licenses/MIT).
 
 Since no one at Microsoft wanted to retain ownership, and I had a somewhat vested interest in making sure this
@@ -123,7 +123,7 @@ If you are interested in working on this project please just:
 
 ## Useful Links
 
-- [GitHub EmacsKeys Project](http://github.com/zbrad/EmacsKeys)
+- [GitHub EmacsKeys Project](https://github.com/zbrad/EmacsKeys)
 - [Visual Studio extension](https://msdn.microsoft.com/en-us/library/dd885119.aspx)
 - [Visual Studio 2008 Emacs Shortcut Keys](http://msdn.microsoft.com/en-us/library/ms165528%28VS.90%29.aspx)
 - [Visual Studio 2010 Blog Entry Accouncing Emacs Emulation](http://blogs.msdn.com/b/visualstudio/archive/2010/09/01/emacs-emulation-extension-now-available.aspx)

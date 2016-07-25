@@ -1,0 +1,194 @@
+---
+layout: post
+title: A new NLogEtw component
+categories: tools
+tags: [nlog,etw]
+modified: 2015-10-19
+image:
+  feature: z/laf85.png
+  credit: zbrad
+  creditlink: http://zbrad.github.io/
+
+---
+
+Describes the creation of a new
+[custom NLog target](https://github.com/NLog/NLog/wiki/Extending%20NLog)
+that provides an
+[ETW source](https://msdn.microsoft.com/en-us/library/ms751538(v=vs.110).aspx)
+(Event Tracing for Windows) for event processing in Microsoft
+platforms.  This is useful for applications built on NLog, that
+also need to execute in ETW environments.  The code is available
+on [GitHub](https://github.com/zbrad/nlogetw) and the package is
+available from [NuGet](https://www.nuget.org/packages/ZBrad.NLogEtw/1.0.0-beta).
+
+## Background
+
+I prefer to use NLog within my applications.  Recently I've been creating
+microservice applications for some customer guidance using the new [Azure Service Fabric](https://azure.microsoft.com/en-us/campaigns/service-fabric/).
+The issue is that by default, the Visual Studio templates and the debugging environment,
+use ETW events for diagnostic and logging information.  During a debug session it shows a display like:
+
+![](images/nlogetw/vs_diag_default.jpg)
+
+My first choice was to use an existing component, so I looked at the
+existing [NLog.Etw](https://github.com/NLog/NLog.Etw) component.  Unfortunately, it does
+not map well to the current tools, which expect a particular ETW manifest format
+for the message.   Consequently all the events show up, but appear as blank entries in
+the Visual Studio "diagnostics events" panel.  Additionally, it does not appear to
+work with manifest based listeners, that is it does not define or use ETW manifests.
+
+Consequently, I was left with creating my own provider, and using the NLog target extension
+mechanism for mapping the events.
+
+## Event Tracing for Windows (ETW)
+
+The earliest use of ETW that I've found was in Windows Vista.
+The original article that I was pointed to is from MSDN Magazine
+April 2007, the article cannot be read online, but you can
+[download and read the chm](http://download.microsoft.com/download/3/A/7/3A7FA450-1F33-41F7-9E6D-3AA95B5A6AEA/MSDNMagazineApril2007en-us.chm)
+locally.  Don't forget to "unblock" the chm file so it can be
+read after download.
+
+The article has a good architectural picture of ETW:
+
+![](images/nlogetw/etw_arch.png)
+
+The article provides a good basis for ETW intentions and design, most of our usage is focused on creating
+a custom ETW provider.
+
+## Creating a custom ETW source provider
+
+Learning what was needed here turned out to be quite complex.
+Part of this confusion is that Microsoft released the initial
+ETW libraries from within the .NET Framework namespace
+**System.Diagnostics.Tracing**, available in .NET 4.5.  But in
+order to use some of the new features, I needed to use the
+"preview" version, **Microsoft.Diagnostics.Tracing** available
+as the [Microsoft.Diagnostics.Tracing NuGet package](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/).  Vance
+Morrison has a [detailed blog post](http://blogs.msdn.com/b/vancem/archive/2015/05/11/version-1-1-24-of-the-eventsource-nuget-package-marked-as-stable.aspx) where he talks about the multi-versioning, wherefore and whys.
+
+An additional resource was that all of the
+[diagnostic reference source is now online](http://referencesource.microsoft.com/#mscorlib/system/diagnostics/eventing/eventsource.cs),
+so I was able to backwards engineer some of my data structure
+usage.
+
+## Implementation details
+
+In order to pass information to ETW in a way that would be understood by ETW listeners,
+I needed a way to create an ETW manifest that consumers would understand.
+
+In .NET 4.5, ETW introduced a way to dynamically pass a manifest, but unfortunately, have not
+exposed that feature yet.  Maybe in the upcoming 4.6?   For now, we'll use the built-in mechanisms
+that inherit from **EventSource** base class, and define methods with types.  The downside is that for now
+we have a fixed **NLog** event source name.
+
+```c#
+[EventSource(Name = "NLog")]
+```
+
+Then for each potential event we define a method with the *Event* attribute (also see [Improvements](#improvements)):
+
+```c#
+        [Event(
+            EventIds.Trace_Basic, 
+            Task = Tasks.Trace, 
+            Opcode = Opcodes.Basic,
+            Level = EventLevel.LogAlways,
+            Message = "{0}"
+            )]
+        public void Trace(
+                string message,
+                string logger,
+                int sequence,
+                string timestamp,
+                string properties
+                )
+        {
+
+        }
+```
+
+This allowed me to define a event type for each different level, with additional information from NLog.
+
+I defined a central *WriteEtw* event, which dyanmically chose which level, and argument list,
+based on type of NLog event.
+
+```c#
+var opcode = getOpcode(data);
+var eventId = getId(data, opcode);
+```
+
+Since we are creating our argument list dynamically, we are actually calling through managed method which
+accepts native pointers *EventSource.WriteEventCore*.  Most of the complexity here is in correctly pinning
+managed references, and creating EventData arguments of the correct size.  For now, we are just supporting
+int and string, but this could be extended later:
+
+```c#
+static unsafe void addEventData(EventData* d, List<GCHandle> args)
+{
+    for (var i = 0; i < args.Count; i++)
+    {
+        d[i].DataPointer = args[i].AddrOfPinnedObject();
+        if (args[i].Target is string)
+            d[i].Size = (((string)args[i].Target).Length + 1) * 2;  // size in bytes (include null terminator)
+        else if (args[i].Target is int)
+            d[i].Size = 4;
+        else
+            throw new ApplicationException("unhandled pinned data size");
+    }
+}
+```
+
+## How to use the component
+
+- To use the component, simply include the project in your build, or download and reference the NuGet package.
+
+- Add to your nlog.config file:
+
+```xml
+  <extensions>
+    <add assembly="NLogEtw" />
+  </extensions>
+  <targets>
+    <target xsi:type="EtwTarget" name="etw" source="TestEtwConfig" layout="${longdate}|${uppercase:${level}}|${message}${onexception:|Exception occurred\:${exception:format=tostring}}" />
+  </targets>
+  <rules>
+    <logger name="*" minlevel="Trace" writeTo="etw" />
+  </rules>
+```
+
+If you are building with Visual Studio, be sure to set the file
+properties for *Copy to Output Directory* to *Copy if newer*.
+
+### Listening to the 'NLog' source
+
+Event listeners are keyed to guids.  When using a name like 'NLog' the EventSource/EventListener will map
+the name into a guid.  For the Visual Studio Diagnostic Event panel, just add the *NLog* source to the list:
+
+![](/images/nlogetw/config_diag.jpg)
+
+## Ideas for improvements
+
+Creating the *Event Methods* in order to infer the ETW manifest is
+somewhat awkward.  It would be better to
+[load the manifest from xml](http://referencesource.microsoft.com/#mscorlib/system/diagnostics/eventing/eventsource.cs,2887)
+and then
+[send the manifest](http://referencesource.microsoft.com/#mscorlib/system/diagnostics/eventing/eventsource.cs,2558)
+similar to how EventSource.cs does it.
+
+## Summary
+I've now been using this component for a few weeks, and it seems ready to now make public.   Please
+file any issues on [GitHub](https://github.com/zbrad/nlogetw).  I hope others will find this component
+helpful.
+
+<h2> References </h2>
+
+This is a collection of links to articles and references that I used during this development:
+
+- [Part1 - ETW Introduction and OverView](http://blogs.msdn.com/b/ntdebugging/archive/2009/08/27/etw-introduction-and-overview.aspx)
+- [Part 2 - Exploring and Decoding ETW Providers using Event Log Channels](http://blogs.msdn.com/b/ntdebugging/archive/2009/09/08/exploring-and-decoding-etw-providers-using-event-log-channels.aspx)
+- [Writing an Instrumentation Manifest](https://msdn.microsoft.com/en-us/library/windows/desktop/dd996930(v=vs.85).aspx)
+- [Vance Morrison's Weblog on EventSource](http://blogs.msdn.com/b/vancem/archive/tags/eventsource/)
+- [Design Notes for EventSource - Reference Source](http://referencesource.microsoft.com/#mscorlib/system/diagnostics/eventing/eventsource.cs,15)
+
+

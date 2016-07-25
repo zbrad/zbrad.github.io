@@ -5,9 +5,9 @@ categories: tools
 tags: [jekyll, github]
 modified: 2015-03-05
 image:
-  feature: blossoms.jpg
+  feature: z/blossoms.jpg
   credit: zbrad
-  creditlink: http://zbrad.github.io/
+  creditlink: https://zbrad.github.io/
 
 ---
 
@@ -23,7 +23,7 @@ In my new role one of the goals is to communicate more about what we do and how 
 
 I'm running Windows 8.1 64-bit, so I needed to download a 64-bit Ruby distribution. I downloaded the prebuilt [Ruby 2.2.1 for x64](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.1-x64.exe?direct) from [RubyInstaller for Windows](http://rubyinstaller.org/downloads/)
 
-![Downloads Warning]({{ site.url }}/images/jekyll/Downloads_Warning.png)
+![Downloads Warning](/images/jekyll/Downloads_Warning.png)
 
 > Note: Windows complained that **This program is not commonly downloaded and could harm your computer**, please ignore for now.
 
@@ -34,21 +34,21 @@ I also needed the Ruby Development kit, so I downloaded the
 
 Double clicking on the Ruby Installer exe file yields an error, select "More Info":
 
-![Windows Warning]({{ site.url }}/images/jekyll/Windows_Overprotective.png)
+![Windows Warning](/images/jekyll/Windows_Overprotective.png)
 
 At this point if you want to re-assure yourself, run your anti-virus checker directly on the exe file, but it passes the virus checkers so we select "Run Anyway":
 
-![Ruby Intaller Options]({{ site.url }}/images/jekyll/RubyInstallOptions.png)
+![Ruby Intaller Options](/images/jekyll/RubyInstallOptions.png)
 
 > Note: Be sure to select the "add to path" option. 
 
 I also decided to associate the file extensions and after the install a happy success window:
 
-![Ruby Intaller Success]({{ site.url }}/images/jekyll/RubyInstallSuccess.png)
+![Ruby Intaller Success](/images/jekyll/RubyInstallSuccess.png)
 
 Now double clicking the Ruby DevKit exe asks where to extract to, I specified *c:\RubyDevKit*.
 
-![Ruby DevKit Extraction]({{ site.url }}/images/jekyll/RubyDevKit_Extract.png)
+![Ruby DevKit Extraction](/images/jekyll/RubyDevKit_Extract.png)
 
 3) Initialize the Ruby DevKit
 
@@ -61,7 +61,7 @@ Now open a console window and type:
 
 Your results should look like:
 
-![Ruby DevKit Init]({{ site.url }}/images/jekyll/RubyDevKit_Init.png)
+![Ruby DevKit Init](/images/jekyll/RubyDevKit_Init.png)
 
 
 4) Install the Bundler Gem
@@ -72,7 +72,7 @@ using the same console window as above, now:
 
 You may also get a *Windows Firewall* alert that you can accept the exception:
 
-![Windows Firewall Alert]({{ site.url }}/images/jekyll/Gem_Install_Firewall_Alert.png)
+![Windows Firewall Alert](/images/jekyll/Gem_Install_Firewall_Alert.png)
 
 5) Install the Jekyll Gem
 
@@ -134,7 +134,7 @@ url: http://localhost:4000
 highlighter: rouge
 
 # prod config
-#url: http://zbrad.github.io/blog-theme/
+#url: https://zbrad.github.io/blog-theme/
 #highlighter: pygments
 ```
 
@@ -145,7 +145,7 @@ Perform a bundle update as:
 
 My output looked like:
 
-![Bundle Update]({{ site.url }}/images/jekyll/BundleUpdate.png)
+![Bundle Update](/images/jekyll/BundleUpdate.png)
 
 Now we can start the local Jekyll server:
 

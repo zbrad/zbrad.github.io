@@ -5,9 +5,9 @@ categories: tools
 tags: [powershell,oxford,ocr]
 modified: 2015-06-29
 image:
-  feature: laf85.png
-  credit: zbrad
-  creditlink: http://zbrad.github.io/
+  feature: psoxford/oxford.jpg
+  credit: 
+  creditlink: https://zbrad.github.io/
 
 ---
 
