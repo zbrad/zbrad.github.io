@@ -488,7 +488,7 @@ header .entry-meta {
 }
 
 .index-image {
-		position: absolute; 
+		position: absolute;
 		top: 0; 
 		left: 0; 
 		right: 0; 
@@ -496,7 +496,7 @@ header .entry-meta {
 		margin: auto; 
 		min-width: 100%;
 		min-height: $feature-image-height; // match .entry-image min-height
-                filter: brightness(50%)
+                opacity: 0.7;
 }
 
 .index-header {
@@ -522,11 +522,8 @@ header .entry-meta {
 	height: 200%;
 	min-height: $feature-image-height;
 	overflow: hidden;
+        text-shadow: 0px 0px 1px rgba(0,0,0,0.6);
 
-	img {
-	}
-
-        
 	h1 {
 		margin: 10px 20px;
 		font-weight: 700;
