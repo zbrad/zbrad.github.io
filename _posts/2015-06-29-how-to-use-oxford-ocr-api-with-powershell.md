@@ -3,7 +3,7 @@ layout: post
 title: How to use the Oxford OCR API with Powershell
 categories: tools
 tags: [powershell,oxford,ocr]
-modified: 2015-06-29
+date: 2015-06-29
 image:
   feature: psoxford/oxford.jpg
   credit: 
@@ -12,7 +12,7 @@ image:
 ---
 
 I recently had a need to use OCR on an existing image, and a teamate suggested using
-the new [Oxford APIs](https://www.projectoxford.ai/doc/general/overview). This was a result of my afternoon
+the new [Oxford APIs](https://www.projectoxford.ai/doc/general/overview){:target="_blank"}. This was a result of my afternoon
 quick hack, but rolled up into a Powershell cmdlet that could be reused by others.
 
 ## Setting up the Oxford APIs for use ##

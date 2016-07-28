@@ -4,7 +4,7 @@ title: Emacs Keys (Emacs Emulator)
 description: "An Emacs key bindings emulator for Visual Studio"
 categories: tools
 tags: [emacs, visual studio]
-modified: 2015-02-24
+date: 2015-02-24
 image:
   feature: z/blossoms.jpg
   credit: zbrad

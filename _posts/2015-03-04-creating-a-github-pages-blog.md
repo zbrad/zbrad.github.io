@@ -3,7 +3,7 @@ layout: post
 title: Creating a GitHub Pages blog
 categories: tools
 tags: [jekyll, github]
-modified: 2015-03-05
+date: 2015-03-05
 image:
   feature: z/blossoms.jpg
   credit: zbrad
