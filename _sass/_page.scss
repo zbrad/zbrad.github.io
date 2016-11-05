@@ -496,7 +496,7 @@ header .entry-meta {
 		margin: auto; 
 		min-width: 100%;
 		min-height: $feature-image-height; // match .entry-image min-height
-                opacity: 0.7;
+                opacity: 0.6;
 }
 
 .index-header {
@@ -510,7 +510,6 @@ header .entry-meta {
         position:absolute;
 	top:30px;
 	left: 60px;
-	color: #FFF;
 	}
 
 .index-title {
@@ -542,9 +541,6 @@ header .entry-meta {
 		@media #{$medium} {
 			@include font-rem(24);
                         }
-                }
-        a {
-                color: #FFF;
                 }
         }
 

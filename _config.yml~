@@ -1,29 +1,33 @@
-title:            Site Title
-description:      Describe your website here.
-disqus_shortname: 
+title:            ZBrad's Blog
+description:      Thoughts on programming, chess, and wine
+disqus_shortname: zbrad-disqus
 reading_time:     true
 words_per_minute: 200
-# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-url:
+
+###############
+# dev config
+#url: http://localhost:4000
+
+# prod config
+url: http://zbrad.github.io
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         o/avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          you@email.com
+  name:           Brad Merrill
+  avatar:         z/headshot.png
+  bio:            "I've been a developer, manager, director, author, speaker, etc. Currently working at Microsoft."
+  email:          brad_merrill@hotmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
+  twitter:        https://twitter.com/zbrad
   facebook:       
-  github:         
+  github:         https://github.com/zbrad
   stackexchange:  
-  linkedin:       
+  linkedin:       https://linkedin.com/in/zbrad
   instagram:      
   flickr:         
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus:
+  google_plus:    +zbrad1
 
 # Background image to be tiled on all pages
 background: 
@@ -35,15 +39,17 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    America/Los_Angeles
 future:      true
 highlighter: rouge
 markdown:    kramdown
+
 gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
+
 sass:
   sass_dir: _sass
   style: compressed
@@ -64,8 +70,10 @@ kramdown:
 
 include: 
   - .htaccess
+
 exclude:
   - "*~"
+  - "#*"
   - "*.less"
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -76,9 +84,10 @@ exclude:
   - CHANGELOG
   - Capfile
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - LICENSE
-  - README
+  - README.md
   - Rakefile
   - config
   - gulpfile.js
