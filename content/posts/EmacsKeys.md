@@ -1,14 +1,12 @@
 ---
-layout: post
 title: Emacs Keys (Emacs Emulator)
 description: "An Emacs key bindings emulator for Visual Studio"
 categories: tools
 tags: [emacs, visual studio]
 date: 2015-02-24
-image:
-  feature: z/blossoms.jpg
-  credit: zbrad
-  creditlink: https://zbrad.github.io/
+url: /tools/EmacsKeys/
+cover:
+  image: /images/z/blossoms.jpg
 ---
 
 Announcing the open sourcing of the

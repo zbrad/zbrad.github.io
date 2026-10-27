@@ -1,14 +1,11 @@
 ---
-layout: post
 title: Creating a GitHub Pages blog
 categories: tools
 tags: [jekyll, github]
 date: 2015-03-05
-image:
-  feature: z/blossoms.jpg
-  credit: zbrad
-  creditlink: https://zbrad.github.io/
-
+url: /tools/creating-a-github-pages-blog/
+cover:
+  image: /images/z/blossoms.jpg
 ---
 
 Steps for successfully setting up a Jekyll blog on Windows hosted by GitHub Pages.

@@ -1,14 +1,12 @@
 ---
-layout: post
 title: Using your WebSocket in JavaScript
 categories: tools
-tags: javascript websocket
+tags: [javascript, websocket]
 date: 2016-07-28
-image:
-  feature: wscore/html5websockets.png
-  credit: W3C
-  creditlink: https://www.w3.org/html/logo/
-
+url: /tools/wsloop/
+cover:
+  image: /images/wscore/html5websockets.png
+  caption: "Image: [W3C](https://www.w3.org/html/logo/)"
 ---
 
 Extends the previous WebSocket sample by providing a generic JavaScript

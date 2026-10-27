@@ -1,14 +1,11 @@
 ---
-layout: post
 title: A new NLogEtw component
 categories: tools
 tags: [nlog,etw]
 date: 2015-10-19
-image:
-  feature: z/laf85.png
-  credit: zbrad
-  creditlink: http://zbrad.github.io/
-
+url: /tools/NLogEtw/
+cover:
+  image: /images/z/laf85.png
 ---
 
 Describes the creation of a new

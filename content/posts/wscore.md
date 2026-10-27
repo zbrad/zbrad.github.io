@@ -1,14 +1,12 @@
 ---
-layout: post
 title: Websockets in Asp.Net Core
 categories: tools
 tags: [wcf]
 date: 2016-07-28
-image:
-  feature: wscore/html5websockets.png
-  credit: W3C
-  creditlink: https://www.w3.org/html/logo/
-
+url: /tools/wscore/
+cover:
+  image: /images/wscore/html5websockets.png
+  caption: "Image: [W3C](https://www.w3.org/html/logo/)"
 ---
 
 An example of creating and using a WebSocket with the new ASP.NET Core.  The example code is available on GitHub [here](https://github.com/zbrad/wsweb).
@@ -18,7 +16,7 @@ An example of creating and using a WebSocket with the new ASP.NET Core.  The exa
 WebSockets were introduced as part of the draft HTML5 specification in 2008, and the first browser to provide support was Google Chrome in 2009.  
 
 At this time (July 2016), the following browsers fully support the WebSocket
-standard ([RFC 6455](https://tools.ietf.org/html/rfc6455){:target="_blank"}):
+standard ([RFC 6455](https://tools.ietf.org/html/rfc6455)):
 
 - Internet Explorer 10
 -  Firefox 11 (PC,Android)
@@ -58,8 +56,8 @@ Open Source tool [VS Code][2] which runs on Windows, Mac, and Linux.
 
 Here are some reference links to more detailed introductions to .NET Core:
 
-- [Scott Hanselman's .NET Core release post](http://www.hanselman.com/blog/NETCore10IsNowReleased.aspx){:target="_blank"}
-- [Microsoft's primary .NET site](https://www.microsoft.com/net){:target="_blank"}
+- [Scott Hanselman's .NET Core release post](http://www.hanselman.com/blog/NETCore10IsNowReleased.aspx)
+- [Microsoft's primary .NET site](https://www.microsoft.com/net)
 
 
 # How to build an AspNet Core WebSocket Server
@@ -250,15 +248,10 @@ how to create libraries that will:
 
 
 [0]: https://blogs.msdn.microsoft.com/webdev/2016/06/27/announcing-asp-net-core-1-0
-{:target="_blank"}
 [1]: https://blogs.msdn.microsoft.com/dotnet/2016/06/27/announcing-net-core-1-0
-{:target="_blank"}
 [2]: https://code.visualstudio.com
-{:target="_blank"}
 [3]: https://msdn.microsoft.com/en-us/hh969243.aspx
-{:target="_blank"}
 [4]: https://en.wikipedia.org/wiki/WebSocket
-{:target="_blank"}
 
 [11]: /images/wscore/ws_newaspproj.png
 [12]: /images/wscore/select_template.png

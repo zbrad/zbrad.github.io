@@ -1,0 +1,61 @@
+baseURL = "https://zbrad.github.io/"
+languageCode = "en-us"
+title = "ZBrad's Blog"
+theme = "PaperMod"
+timeZone = "America/Los_Angeles"
+
+[pagination]
+  pagerSize = 5
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Jekyll served the feed at /feed.xml; keep that path for existing subscribers.
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"
+
+[markup.highlight]
+  noClasses = false
+
+[params]
+  description = "Thoughts on programming, chess, and wine"
+  author = "Brad Merrill"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+
+  [params.homeInfoParams]
+    Title = "ZBrad's Blog"
+    Content = "Thoughts on programming, chess, and wine"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/zbrad"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/zbrad"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/feed.xml"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Archive"
+    url = "/archives/"
+    weight = 20
+
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 30

@@ -1,14 +1,11 @@
 ---
-layout: post
 title: WcfLib - WCF services, clients, and routers
 categories: tools
 tags: [wcf]
 date: 2015-10-19
-image:
-  feature: z/laf85.png
-  credit: zbrad
-  creditlink: https://zbrad.github.io/
-
+url: /tools/WcfLib/
+cover:
+  image: /images/z/laf85.png
 ---
 
 Describes the [WcfLib](https://github.com/zbrad/WcfLib) component, for easily creating Wcf services, clients, and routers.  These are useful for creating and communicating with WCF services, particularly in Azure environments which require WCF routing capabilities.  Available as a ([WcfLib NuGet Library](https://www.nuget.org/packages/ZBrad.WcfLib/))

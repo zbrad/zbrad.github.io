@@ -1,14 +1,11 @@
 ---
-layout: post
 title: CsLex - A lexical analyzer in C#
 description: "A C# lexical analyzer"
 tags: [csharp, C#]
 date: 2015-02-24
-image:
-  feature: z/blossoms.jpg
-  credit: zbrad
-  creditlink: https://zbrad.github.io/
-
+url: /CsLex/
+cover:
+  image: /images/z/blossoms.jpg
 ---
 
 The CsLex source is now posted on [GitHub](http://github.com/zbrad/CsLex).
