@@ -37,7 +37,7 @@ build tooling in [tuned-common](https://github.com/zbrad/tuned-common):
 - **Frameworks and kernels:** [PyTorch](https://github.com/zbrad/pytorch/blob/tuned-builds/tuned/README.md),
   [FlashAttention](https://github.com/zbrad/flash-attention-vllm/blob/tuned-builds/tuned/README.md),
   [FlashInfer](https://github.com/zbrad/flashinfer/blob/tuned-builds/tuned/README.md),
-  [NCCL](https://github.com/zbrad/nccl/tree/tuned-builds/tuned)
+  [NCCL](https://github.com/zbrad/nccl/blob/tuned-builds-cu134/tuned/README.md)
 - **Inference and serving:** [vLLM](https://github.com/zbrad/vllm/blob/tuned-builds/tuned/README.md),
   [llama.cpp](https://github.com/zbrad/llama.cpp/blob/tuned-builds/tuned/README.md),
   [Ollama](https://github.com/zbrad/ollama/blob/tuned-builds/tuned/README.md),
