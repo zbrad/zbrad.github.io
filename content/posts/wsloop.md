@@ -10,7 +10,7 @@ cover:
 ---
 
 Extends the previous WebSocket sample by providing a generic JavaScript
-page that exercises a WebSocket endpoint.  [Example code is on GitHub](https://github.com/zbrad/webweb).
+page that exercises a WebSocket endpoint.  [Example code is on GitHub](https://github.com/zbrad/wsweb).
 
 # Interacting with WebSockets
 

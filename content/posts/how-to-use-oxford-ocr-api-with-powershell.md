@@ -9,15 +9,15 @@ cover:
 ---
 
 I recently had a need to use OCR on an existing image, and a teamate suggested using
-the new [Oxford APIs](https://www.projectoxford.ai/doc/general/overview). This was a result of my afternoon
+the new [Oxford APIs](https://web.archive.org/web/20150705061240/http://www.projectoxford.ai:80/doc/general/overview). This was a result of my afternoon
 quick hack, but rolled up into a Powershell cmdlet that could be reused by others.
 
 ## Setting up the Oxford APIs for use ##
 
-To quickly get up to speed, I followed the descriptions [here](https://www.projectoxford.ai/doc/general/subscription-key-mgmt) which outline the steps as:
+To quickly get up to speed, I followed the descriptions [here](https://web.archive.org/web/20150622114726/http://www.projectoxford.ai:80/doc/general/subscription-key-mgmt) which outline the steps as:
 
 - Select the API you wish to use
-  - I navigated to [Computer Vision APIs](https://www.projectoxford.ai/vision) and selected the "Sign Up" button.
+  - I navigated to [Computer Vision APIs](https://web.archive.org/web/20150705154509/http://www.projectoxford.ai:80/vision) and selected the "Sign Up" button.
 - This will bring up the Azure portal, select the marketplace
   ![](/images/psoxford/select-from-marketplace.png)
   you will have to option of naming your service, I chose *VisionApi*
@@ -28,7 +28,10 @@ To quickly get up to speed, I followed the descriptions [here](https://www.proje
 - You will now see your subscriptions with key information hidden.  Select *Show* and copy your new **OxfordKey**.
   ![](/images/psoxford/show-key.png)
 
-  Now that we have the service side setup, we will use the **Oxford.ps1** script from [psoxford](https://github.com/zbrad/psoxford).  Easiest way to get this is to clone the repo, which will also get you our test images.
+  Now that we have the service side setup, we will use the **Oxford.ps1** script from [psoxford](https://web.archive.org/web/20180611112405/https://github.com/zbrad/psoxford).  Easiest way to get this is to clone the repo, which will also get you our test images.
+
+  *Update, 2026: the psoxford repository no longer exists; the link above is
+  an archived copy of its GitHub page.*
 
 ## PowerShell ##
 

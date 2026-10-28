@@ -18,14 +18,14 @@ In my new role one of the goals is to communicate more about what we do and how 
 
 1) Download Ruby and the Ruby DevKit
 
-I'm running Windows 8.1 64-bit, so I needed to download a 64-bit Ruby distribution. I downloaded the prebuilt [Ruby 2.2.1 for x64](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.1-x64.exe?direct) from [RubyInstaller for Windows](http://rubyinstaller.org/downloads/)
+I'm running Windows 8.1 64-bit, so I needed to download a 64-bit Ruby distribution. I downloaded the prebuilt [Ruby 2.2.1 for x64](https://github.com/oneclick/rubyinstaller/releases/download/ruby-2.2.1/rubyinstaller-2.2.1-x64.exe) from [RubyInstaller for Windows](http://rubyinstaller.org/downloads/)
 
 ![Downloads Warning](/images/jekyll/Downloads_Warning.png)
 
 > Note: Windows complained that **This program is not commonly downloaded and could harm your computer**, please ignore for now.
 
 I also needed the Ruby Development kit, so I downloaded the 
-[Ruby DevKit for x64](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe?direct).
+[Ruby DevKit for x64](https://github.com/oneclick/rubyinstaller/releases/download/devkit-4.7.2/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe).
 
 2) Install Ruby and the Ruby DevKit
 
@@ -82,7 +82,7 @@ This may take a few minutes (depending on your network speed) as it installs Jek
 6) Install the syntax highlighter
 
 For Jekyll you have a choice for syntax highlighters, I chose **rouge** which did not
-require any additional runtimes (eg Python).  **rouge** is a [Ruby-based syntax highlighter](http://rouge.jayferd.us/demo), see the [Rouge Project](https://github.com/jneen/rouge) for more details.
+require any additional runtimes (eg Python).  **rouge** is a [Ruby-based syntax highlighter](https://web.archive.org/web/20150308165529/http://rouge.jayferd.us:80/demo), see the [Rouge Project](https://github.com/jneen/rouge) for more details.
 
 > Aside: This will become the default for GitHub Pages in the near feature but for now they are still using **Pygments**.  So for now, I will have to switch highlighter selections between *dev* mode and *prod* mode.
 
@@ -94,7 +94,7 @@ Eventually, I'll modify the **_config.yml** file to set **rouge** as the highlig
 
 7) Fork a design
 
-I looked at several Jekyll site designs and selected the [HPSTR style](http://mmistakes.github.io/hpstr-jekyll-theme/).  First I forked mmistakes design and renamed it to blog-theme.
+I looked at several Jekyll site designs and selected the [HPSTR style](https://web.archive.org/web/20150306205614/http://mmistakes.github.io:80/hpstr-jekyll-theme/).  First I forked mmistakes design and renamed it to blog-theme.
 
 8) Custom your local fork
 
@@ -160,8 +160,8 @@ Links:
 - [Jekyll](http://jekyllrb.com/)
 - [GitHub Pages](http://pages.github.com)
 - [Using Jekyll with Pages](http://help.github.com/articles/using-jekyll-with-pages/)
-- [Fork your own project on GitHub](http://bitdrift.com/post/4534738938/fork-your-own-project-on-github)
-- [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)
+- [Fork your own project on GitHub](https://web.archive.org/web/20150314002628/http://bitdrift.com:80/post/4534738938/fork-your-own-project-on-github)
+- [Run Jekyll on Windows](https://web.archive.org/web/20150306083314/http://jekyll-windows.juthilo.com:80/)
 
 
 

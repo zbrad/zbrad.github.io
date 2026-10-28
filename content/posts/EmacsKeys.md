@@ -57,8 +57,8 @@ removed from the main product but the Visual Studio team
 released the key bindings as a
 [Visual Studio extension](https://msdn.microsoft.com/en-us/library/dd885119.aspx)
 available in the online
-[Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/) called
-"[Emacs Emulation](https://visualstudiogallery.msdn.microsoft.com/09dc58c4-6f47-413a-9176-742be7463f92/)".
+[Visual Studio Gallery](https://web.archive.org/web/20150315071434/https://visualstudiogallery.msdn.microsoft.com/) called
+"[Emacs Emulation](https://web.archive.org/web/20150626131549/https://visualstudiogallery.msdn.microsoft.com/09dc58c4-6f47-413a-9176-742be7463f92)".
 
 This made it so that the bindings were still available for developers, like
 myself, who still used our old keyboard shortcuts.  *I cannot begin to count
@@ -125,7 +125,7 @@ If you are interested in working on this project please just:
 - [Visual Studio extension](https://msdn.microsoft.com/en-us/library/dd885119.aspx)
 - [Visual Studio 2008 Emacs Shortcut Keys](http://msdn.microsoft.com/en-us/library/ms165528%28VS.90%29.aspx)
 - [Visual Studio 2010 Blog Entry Accouncing Emacs Emulation](http://blogs.msdn.com/b/visualstudio/archive/2010/09/01/emacs-emulation-extension-now-available.aspx)
-- [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/)
+- [Visual Studio Gallery](https://web.archive.org/web/20150315071434/https://visualstudiogallery.msdn.microsoft.com/)
 - [Visual Studio Gallery Emacs Emulation extension](https://msdn.microsoft.com/en-us/library/dd885119.aspx)
 - [Gnu Emacs](http://www.gnu.org/software/emacs)
 

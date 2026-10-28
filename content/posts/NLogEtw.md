@@ -62,7 +62,7 @@ ETW libraries from within the .NET Framework namespace
 order to use some of the new features, I needed to use the
 "preview" version, **Microsoft.Diagnostics.Tracing** available
 as the [Microsoft.Diagnostics.Tracing NuGet package](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/).  Vance
-Morrison has a [detailed blog post](http://blogs.msdn.com/b/vancem/archive/2015/05/11/version-1-1-24-of-the-eventsource-nuget-package-marked-as-stable.aspx) where he talks about the multi-versioning, wherefore and whys.
+Morrison has a [detailed blog post](https://web.archive.org/web/20150929000614/http://blogs.msdn.com/b/vancem/archive/2015/05/11/version-1-1-24-of-the-eventsource-nuget-package-marked-as-stable.aspx) where he talks about the multi-versioning, wherefore and whys.
 
 An additional resource was that all of the
 [diagnostic reference source is now online](http://referencesource.microsoft.com/#mscorlib/system/diagnostics/eventing/eventsource.cs),
@@ -182,10 +182,10 @@ helpful.
 
 This is a collection of links to articles and references that I used during this development:
 
-- [Part1 - ETW Introduction and OverView](http://blogs.msdn.com/b/ntdebugging/archive/2009/08/27/etw-introduction-and-overview.aspx)
-- [Part 2 - Exploring and Decoding ETW Providers using Event Log Channels](http://blogs.msdn.com/b/ntdebugging/archive/2009/09/08/exploring-and-decoding-etw-providers-using-event-log-channels.aspx)
+- [Part1 - ETW Introduction and OverView](https://web.archive.org/web/20151122031539/http://blogs.msdn.com:80/b/ntdebugging/archive/2009/08/27/etw-introduction-and-overview.aspx)
+- [Part 2 - Exploring and Decoding ETW Providers using Event Log Channels](https://web.archive.org/web/20151109032730/http://blogs.msdn.com:80/b/ntdebugging/archive/2009/09/08/exploring-and-decoding-etw-providers-using-event-log-channels.aspx)
 - [Writing an Instrumentation Manifest](https://msdn.microsoft.com/en-us/library/windows/desktop/dd996930(v=vs.85).aspx)
-- [Vance Morrison's Weblog on EventSource](http://blogs.msdn.com/b/vancem/archive/tags/eventsource/)
+- [Vance Morrison's Weblog on EventSource](https://web.archive.org/web/20151027195416/http://blogs.msdn.com/b/vancem/archive/tags/eventsource/)
 - [Design Notes for EventSource - Reference Source](http://referencesource.microsoft.com/#mscorlib/system/diagnostics/eventing/eventsource.cs,15)
 
 
