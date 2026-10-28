@@ -28,6 +28,23 @@ update and prune models without disrupting production — is a distributed
 systems problem at its core. The tools have changed dramatically. The
 fundamental challenges haven't.
 
+## Current work
+
+I maintain builds of the open-source AI stack tuned for NVIDIA GB10 (DGX Spark) and
+RTX 40/50-series GPUs, each on a `tuned-builds` branch of my fork, with shared
+build tooling in [tuned-common](https://github.com/zbrad/tuned-common):
+
+- **Frameworks and kernels:** [PyTorch](https://github.com/zbrad/pytorch/blob/tuned-builds/tuned/README.md),
+  [FlashAttention](https://github.com/zbrad/flash-attention-vllm/tree/tuned-builds/tuned),
+  [FlashInfer](https://github.com/zbrad/flashinfer/blob/tuned-builds/tuned/README.md),
+  [NCCL](https://github.com/zbrad/nccl/tree/tuned-builds/tuned)
+- **Inference and serving:** [vLLM](https://github.com/zbrad/vllm/blob/tuned-builds/tuned/README.md),
+  [llama.cpp](https://github.com/zbrad/llama.cpp/blob/tuned-builds/tuned/README.md),
+  [Ollama](https://github.com/zbrad/ollama/tree/tuned-builds/tuned),
+  [Open WebUI](https://github.com/zbrad/open-webui/tree/tuned-builds)
+- **Vector search:** [FAISS](https://github.com/zbrad/faiss/blob/tuned-builds/tuned/README.md),
+  [cuVS](https://github.com/zbrad/cuvs/tree/tuned-builds/tuned), [RAFT](https://github.com/zbrad/raft/tree/tuned-builds/tuned)
+
 ## Career
 
 - **2024–present · ZBrad LLC** — Independent AI Researcher. Local LLM
