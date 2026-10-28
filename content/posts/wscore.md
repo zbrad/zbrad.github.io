@@ -1,7 +1,7 @@
 ---
 title: Websockets in Asp.Net Core
 categories: tools
-tags: [wcf]
+tags: [websocket, aspnetcore]
 date: 2016-07-28
 url: /tools/wscore/
 cover:

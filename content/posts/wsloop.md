@@ -2,7 +2,7 @@
 title: Using your WebSocket in JavaScript
 categories: tools
 tags: [javascript, websocket]
-date: 2016-07-28
+date: 2017-01-02
 url: /tools/wsloop/
 cover:
   image: /images/wscore/html5websockets.png
