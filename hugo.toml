@@ -20,7 +20,7 @@ timeZone = "America/Los_Angeles"
   noClasses = false
 
 [params]
-  description = "Thoughts on programming, chess, and wine"
+  description = "Thoughts on AI, software, chess, and wine"
   author = "Brad Merrill"
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -30,7 +30,7 @@ timeZone = "America/Los_Angeles"
 
   [params.homeInfoParams]
     Title = "ZBrad's Blog"
-    Content = "Thoughts on programming, chess, and wine"
+    Content = "Thoughts on AI, software, chess, and wine"
 
   [[params.socialIcons]]
     name = "github"
